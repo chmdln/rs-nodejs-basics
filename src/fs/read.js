@@ -8,7 +8,6 @@ const read = async () => {
   const filePath = path.join(dirName, 'files', 'fileToRead.txt');
 
   try {
-    // Check if file exists
     await access(filePath, constants.F_OK);
     const content = await readFile(filePath, 'utf8');
     console.log(content);
